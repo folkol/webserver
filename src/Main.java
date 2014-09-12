@@ -7,7 +7,6 @@ public class Main
         ServerSocket serverSocket = new ServerSocket(8080);
         try (OutputStream out = serverSocket.accept().getOutputStream()) {
             out.write("Hello, world!\n".getBytes());
-            out.flush();
         }
     }
 }
